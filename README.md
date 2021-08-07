@@ -1,29 +1,20 @@
-# dev-starter
-A starter template for a React Next.js component library. 
-
-## Next.js
-```bash 
-# Install Next.js
-$ yarn create next-app --typescript .
-```
-
-## Development and building
-```bash 
-# Start Next.js for development
-$ yarn dev
-
-# Build library
-$ yarn build
-```
-
-## Publishing
+# Ref
+## Installation
 ```bash
-$ yarn npm:login
-$ yarn publish
+$ yarn add @flaze/ref # or npm i @flaze/ref
 ```
 
-## Setup
-```bash
-$ yarn install
-$ yarn setup
+## Usage
+```tsx
+// Init
+const ref = new Ref<HTMLDivElement>();
+
+// Create
+<div ref={ref.create} />
+
+// Get
+const element = ref.get();
+
+// Has
+const hasElement = ref.has();
 ```

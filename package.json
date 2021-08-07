@@ -1,6 +1,6 @@
 {
   "name": "@flaze/ref",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -15,6 +15,7 @@
     "dev": "next dev",
     "build:lib": "rm dist -rf && tsc --project tsconfig.lib.json",
     "npm:login": "npm adduser",
+    "publish:lib": "yarn publish --access public",
     "prepublish": "yarn build:lib"
   },
   "dependencies": {
