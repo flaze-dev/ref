@@ -1,4 +1,6 @@
 # Ref
+A simple ref manager for React.
+
 ## Installation
 ```bash
 $ yarn add @flaze/ref # or npm i @flaze/ref
