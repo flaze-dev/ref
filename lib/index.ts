@@ -1,5 +1,5 @@
-import Example from "lib/core/Example";
+import Ref from "lib/core/ref";
 
 export {
-  Example
+  Ref
 };
