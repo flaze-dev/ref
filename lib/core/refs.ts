@@ -1,5 +1,8 @@
 
 
+type CreateCallback<E, D> = ({element, setData}: {element: E, setData: (data: D) => void}) => void;
+
+
 /**
  * Refs Class
  * @author Ingo Andelhofs
@@ -12,9 +15,10 @@ class Refs<E, D> {
     this.refs = new Map();
   }
 
-  public create = (key: string) => {
-
+  public create = (key: string, callback?: CreateCallback<E, D>) => {
     return (element: E) => {
+      callback?.({element, setData: (data: D) => this.setData(key, data)});
+
       const prev = this.refs.get(key) ?? {};
       this.refs.set(key, {...prev, element});
     }
