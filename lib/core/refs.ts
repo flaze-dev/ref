@@ -1,6 +1,7 @@
 
 
 type CreateCallback<E, D> = ({element, setData}: {element: E, setData: (data: D) => void}) => void;
+type ForEachCallback<E, D> = ({key, value}: {key: string, value: {element?: E, data?: D}}) => void;
 
 
 /**
@@ -39,6 +40,14 @@ class Refs<E, D> {
 
   public get = (key: string): E => {
     return this.refs.get(key)?.element!;
+  }
+
+  public forEach = (callback: ForEachCallback<E, D>) => {
+    const entries = Array.from(this.refs);
+
+    entries.forEach(([key, value]: [string,  {element?: E, data?: D}]) => {
+      callback({key: key, value: value});
+    });
   }
 }
 
