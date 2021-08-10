@@ -1,4 +1,4 @@
-import Ref from "lib/core/ref";
+import Ref from "./core/ref";
 
 export {
   Ref
