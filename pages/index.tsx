@@ -14,7 +14,7 @@ class IndexPage extends Component {
 
   // Lifecycle
   public componentDidMount() {
-    const box = this.ref.get();
+    const box = this.ref.getElement();
     box.style.backgroundColor = "blue";
   }
 

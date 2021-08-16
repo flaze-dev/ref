@@ -6,18 +6,18 @@
  */
 class Ref<T> {
 
-  private ref?: T;
+  private _ref?: T;
 
   public create = (element: T) => {
-    this.ref = element;
+    this._ref = element;
   }
 
-  public has = (): boolean => {
-    return this.ref !== undefined;
+  public hasElement = (): boolean => {
+    return this._ref !== undefined;
   }
 
-  public get = (): T => {
-    return this.ref!;
+  public getElement = (): T => {
+    return this._ref!;
   }
 }
 

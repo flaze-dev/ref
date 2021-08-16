@@ -34,11 +34,11 @@ class Refs<E, D> {
     return this.refs.get(key)?.data;
   }
 
-  public has = (key: string): boolean => {
+  public hasElement = (key: string): boolean => {
     return this.refs.has(key);
   }
 
-  public get = (key: string): E => {
+  public getElement = (key: string): E => {
     return this.refs.get(key)?.element!;
   }
 
